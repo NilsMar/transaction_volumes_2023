@@ -1,5 +1,10 @@
+import warnings
+
 import pandas as pd
+
 from utils import analyze_quarterly_changes, forecast_october_volume, plot_forecast
+
+warnings.filterwarnings("ignore")
 
 def main():
     # Load  data

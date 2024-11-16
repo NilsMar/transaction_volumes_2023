@@ -1,6 +1,5 @@
 import pandas as pd
 from scipy import stats
-import numpy as np
 import matplotlib.pyplot as plt
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.stattools import adfuller
