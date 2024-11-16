@@ -1,9 +1,9 @@
-import pandas as pd
-from scipy import stats
-import matplotlib.pyplot as plt
-from statsmodels.tsa.arima.model import ARIMA
-from statsmodels.tsa.stattools import adfuller
 import matplotlib.dates as mdates
+import matplotlib.pyplot as plt
+import pandas as pd
+from scipy import stats 
+from statsmodels.tsa.arima.model import ARIMA  
+from statsmodels.tsa.stattools import adfuller
 
 def analyze_quarterly_changes(df):
     """
