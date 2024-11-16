@@ -76,7 +76,6 @@ def forecast_october_volume(df):
 
     Notes:
     ------
-    - The function automatically converts posting_date to datetime and sets it as the index
     - The ARIMA model is fitted only on data up to September 2023 to avoid data leakage
     - Stationarity test results are printed to console
     """
@@ -92,7 +91,7 @@ def forecast_october_volume(df):
     adf_result = adfuller(monthly_data)
     is_stationary = adf_result[1] < 0.05
     print(f"ADF Test p-value: {adf_result[1]:.4f} (Stationary: {is_stationary})")
-    # with 0.0855 p value is slighlty above 0.05. For this use case I will assume the timeseries is stationary
+    # 0.0855 p value is slighlty above 0.05. For this use case I will assume the timeseries is stationary
     # but with more time, it would be advisable to apply differencing and compare performance.
      
     # Define and fit the ARIMA model using data up to September 2023 to avoid data leakage
@@ -156,7 +155,7 @@ def plot_forecast(forecast_results):
     # Concatenate historical and forecasted data
     combined_data = pd.concat([historical_data, forecasted_data])
     
-    # Calculate proper date range for x-axis
+    # Calculate date range for x-axis
     start_date = combined_data.index.min() - pd.DateOffset(days=5)
     end_date = combined_data.index.max() + pd.DateOffset(days=5)
     

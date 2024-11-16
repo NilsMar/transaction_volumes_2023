@@ -12,6 +12,10 @@ def main():
     # Call the forecasting function
     forecast_results = forecast_october_volume(df)
 
+    # Print the forecast results
+    print(f"Forecasted Volume for October 2023: £{forecast_results['forecast']:.2f}")
+    print(f"95% Confidence Interval: £{forecast_results['confidence_interval'][0]:.2f} - £{forecast_results['confidence_interval'][1]:.2f}")
+    
     # Plot the forecast
     plot_forecast(forecast_results)
 
