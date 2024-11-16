@@ -1,0 +1,19 @@
+# Ignore Jupyter Notebook files
+*.ipynb
+
+# Ignore CSV files
+*.csv
+
+# Ignore text files
+*.txt 
+
+# Ignore any other temporary files or directories (optional)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+
+# Ignore virtual environment
+venv/
